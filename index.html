@@ -4,16 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Olive Yew - UX Designer</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9fc;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.project {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.project p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #222;
+}
+
+.btn.large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.cta p {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .projects {
+    gap: 30px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .cta p {
+    font-size: 1.2rem;
+  }
+}
+
+</style>
 </head>
 <body>
 
   <div class="container">
     <!-- Header -->
     <header>
-      <h1>Olive Yew</h1>
-      <p class="subtitle">UX Designer</p>
+      <h1>Sygnls</h1>
+      <p class="subtitle">Building Tomorrow's Tech Today</p>
       <p class="tagline">Creating intuitive, scalable, and user-centric solutions for high-growth products.</p>
     </header>
 
@@ -22,43 +164,37 @@
       <div class="project">
         <h2>App Hire</h2>
         <p>A software application that enables the electronic handling of recruitment and hiring needs.</p>
-        <a href="https://uxfol.io/case-study/app-hire-link" target="_blank" class="btn">Full Case Study</a>
+        <a href="https://uxfol.io/p/d9d5ade2/02bc1c1d" target="_blank" class="btn">Full Case Study</a>
       </div>
 
       <div class="project">
         <h2>LetsRemotify</h2>
         <p>LetsRemotify is a platform that simplifies remote hiring for companies and developers.</p>
-        <a href="https://uxfol.io/case-study/letsremotify-link" target="_blank" class="btn">Full Case Study</a>
+        <a href="https://uxfol.io/p/cca6e2da/02f28fc8" target="_blank" class="btn">Full Case Study</a>
       </div>
 
       <div class="project">
         <h2>3DX Mall</h2>
-        <p>An e-commerce website providing a unique and engaging shopping experience.</p>
-        <a href="https://uxfol.io/case-study/3dx-mall-link" target="_blank" class="btn">Full Case Study</a>
+        <p>An e-commerce website provides a truly unique and engaging shopping experience that is sure to delight and satisfy customers.</p>
+        <a href="https://uxfol.io/p/46cb98e9/029e9493" target="_blank" class="btn">Full Case Study</a>
       </div>
 
       <div class="project">
         <h2>Terrascope</h2>
-        <p>An AI-powered real estate search engine that recommends rural properties using user feedback.</p>
-        <a href="https://uxfol.io/case-study/terrascope-link" target="_blank" class="btn">Full Case Study</a>
+        <p>Terrascope is an AI-powered real estate search engine that uses user feedback to recommend rural properties and improve search results.</p>
+        <a href="https://uxfol.io/p/2bd36962/02854534" target="_blank" class="btn">Full Case Study</a>
       </div>
 
       <div class="project">
         <h2>Fumio</h2>
-        <p>An online furniture store app with categorized products for bedroom, living room, dining, outdoor, and office.</p>
-        <a href="https://uxfol.io/case-study/fumio-link" target="_blank" class="btn">Full Case Study</a>
+        <p>An online furniture store app hat enables users to buy furniture items online. The app has a wide range of furniture products that are displayed in different categories such as bedroom, living room, dining room, outdoor, and office furniture.</p>
+        <a href="https://uxfol.io/p/a46eafd0/02f2942c" target="_blank" class="btn">Full Case Study</a>
       </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <p>Showcase your work.<br>Convince recruiters with compelling case studies.</p>
-      <a href="https://uxfol.io" target="_blank" class="btn large">Add case study</a>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Olive Yew. All rights reserved.</p>
+      <p>&copy; 2025 Sygnls. All rights reserved.</p>
     </footer>
   </div>
 
