@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1600px; /* was 900px */
   margin: 60px auto;
   padding: 20px;
 }
@@ -53,33 +53,99 @@ h1 {
 
 /* Projects */
 .projects {
-  display: grid;
-  gap: 40px;
-  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  margin-bottom: 120px;
 }
 
 .project {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding: 0;
+  min-height: 600px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 80px;
 }
 
 .project:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
 .project h2 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin-bottom: 12px;
   color: #222;
 }
 
 .project p {
   color: #555;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+  margin-bottom: 0;
+  font-size: 1.35rem;
+}
+
+.project-img {
+  width: 700px;
+  min-width: 700px;
+  max-width: 700px;
+  height: 500px;
+  margin: 0;
+  border-radius: 16px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  display: block;
+  padding: 40px;
+}
+
+.project-content {
+  flex: 1;
+  max-width: 600px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.project-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #23272f;
+}
+
+.project-content p {
+  font-size: 1.5rem;
+  color: #23272f;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.project-content .btn {
+  align-self: flex-start;
+  margin-top: 24px;
+  padding: 20px 48px;
+  font-size: 1.2rem;
+  border-radius: 2em;
+  background: #36383a;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s;
+}
+
+.project-content .btn:hover {
+  background: #23272f;
 }
 
 /* Buttons */
@@ -125,25 +191,47 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  header {
-    margin-bottom: 40px;
+@media (max-width: 1400px) {
+  .project-img {
+    width: 480px;
+    min-width: 480px;
+    max-width: 480px;
+    height: 340px;
+    padding: 24px;
   }
-
-  h1 {
-    font-size: 2.5rem;
+  .project-content {
+    max-width: 420px;
   }
-
-  .projects {
-    gap: 30px;
-  }
-
   .project {
-    padding: 20px;
+    gap: 40px;
   }
+}
 
-  .cta p {
-    font-size: 1.2rem;
+@media (max-width: 900px) {
+  .project {
+    flex-direction: column;
+    align-items: center;
+    min-height: unset;
+    gap: 32px;
+  }
+  .project-img {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 220px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .project-content {
+    max-width: 100%;
+    padding: 0 8px;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .project-content .btn {
+    align-self: stretch;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -162,33 +250,48 @@ footer {
     <!-- Projects -->
     <section class="projects">
       <div class="project">
-        <h2>App Hire</h2>
-        <p>A software application that enables the electronic handling of recruitment and hiring needs.</p>
-        <a href="https://uxfol.io/p/d9d5ade2/02bc1c1d" target="_blank" class="btn">Full Case Study</a>
+        <img src="https://storage.googleapis.com/uxfolio/63fc876cd5d7330002bc17f7/64088a31deb8e80002982a16/FVIUhKaYpZ2aSQoA.png" alt="App Hire" class="project-img" />
+        <div class="project-content">
+          <h2>App Hire</h2>
+          <p>A software application that enables the electronic handling of recruitment and hiring needs.</p>
+          <a href="https://uxfol.io/p/d9d5ade2/02bc1c1d" target="_blank" class="btn">Full Case Study</a>
+        </div>
       </div>
 
       <div class="project">
-        <h2>LetsRemotify</h2>
-        <p>LetsRemotify is a platform that simplifies remote hiring for companies and developers.</p>
-        <a href="https://uxfol.io/p/cca6e2da/02f28fc8" target="_blank" class="btn">Full Case Study</a>
+        <img src="https://storage.googleapis.com/uxfolio/63fc876cd5d7330002bc17f7/64088a31deb8e80002982a16/iwb3rctfH2srPDdg.png" alt="LetsRemotify" class="project-img" />
+        <div class="project-content">
+          <h2>LetsRemotify</h2>
+          <p>LetsRemotify is a platform that simplifies remote hiring for companies and developers.</p>
+          <a href="https://uxfol.io/p/cca6e2da/02f28fc8" target="_blank" class="btn">Full Case Study</a>
+        </div>
       </div>
 
       <div class="project">
-        <h2>3DX Mall</h2>
-        <p>An e-commerce website provides a truly unique and engaging shopping experience that is sure to delight and satisfy customers.</p>
-        <a href="https://uxfol.io/p/46cb98e9/029e9493" target="_blank" class="btn">Full Case Study</a>
+        <img src="https://storage.googleapis.com/uxfolio/63fc876cd5d7330002bc17f7/64088a31deb8e80002982a16/nmZa9EA58DwvrNsm.png" alt="3DX Mall" class="project-img" />
+        <div class="project-content">
+          <h2>3DX Mall</h2>
+          <p>An e-commerce website provides a truly unique and engaging shopping experience that is sure to delight and satisfy customers.</p>
+          <a href="https://uxfol.io/p/46cb98e9/029e9493" target="_blank" class="btn">Full Case Study</a>
+        </div>
       </div>
 
       <div class="project">
-        <h2>Terrascope</h2>
-        <p>Terrascope is an AI-powered real estate search engine that uses user feedback to recommend rural properties and improve search results.</p>
-        <a href="https://uxfol.io/p/2bd36962/02854534" target="_blank" class="btn">Full Case Study</a>
+        <img src="https://storage.googleapis.com/uxfolio/63fc876cd5d7330002bc17f7/64088a31deb8e80002982a16/GLo0y1fV65cHqPuS.png" alt="Terrascope" class="project-img" />
+        <div class="project-content">
+          <h2>Terrascope</h2>
+          <p>Terrascope is an AI-powered real estate search engine that uses user feedback to recommend rural properties and improve search results.</p>
+          <a href="https://uxfol.io/p/2bd36962/02854534" target="_blank" class="btn">Full Case Study</a>
+        </div>
       </div>
 
       <div class="project">
-        <h2>Fumio</h2>
-        <p>An online furniture store app hat enables users to buy furniture items online. The app has a wide range of furniture products that are displayed in different categories such as bedroom, living room, dining room, outdoor, and office furniture.</p>
-        <a href="https://uxfol.io/p/a46eafd0/02f2942c" target="_blank" class="btn">Full Case Study</a>
+        <img src="https://storage.googleapis.com/uxfolio/63fc876cd5d7330002bc17f7/64088a31deb8e80002982a16/L01kACkxWaLGvLJv.png" alt="Fumio" class="project-img" />
+        <div class="project-content">
+          <h2>Fumio</h2>
+          <p>An online furniture store app hat enables users to buy furniture items online. The app has a wide range of furniture products that are displayed in different categories such as bedroom, living room, dining room, outdoor, and office furniture.</p>
+          <a href="https://uxfol.io/p/a46eafd0/02f2942c" target="_blank" class="btn">Full Case Study</a>
+        </div>
       </div>
     </section>
 
